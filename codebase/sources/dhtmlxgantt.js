@@ -7561,6 +7561,10 @@ function createTaskRenderer(gantt){
 			content.innerHTML = templates.task_text(task.start_date, task.end_date, task);
 		content.className = "gantt_task_content";
 		//content.style.width = width + 'px';
+
+		// added by amir
+		content.title = task.text;
+
 		return content;
 	}
 
@@ -8324,6 +8328,9 @@ function createGridLineRender(gantt){
 		el.className = "gantt_row" + css;
 		el.style.height = config.row_height + "px";
 		el.style.lineHeight = (config.row_height) + "px";
+
+		// added by amir
+		el.title = item.text;
 
 		if(config.smart_rendering){
 			el.style.position = "absolute";

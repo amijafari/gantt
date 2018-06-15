@@ -8,6 +8,11 @@ dhtmlxGantt is an open source JavaScript Gantt chart that helps you illustrate a
 [https://dhtmlx.com/docs/products/dhtmlxGantt](https://dhtmlx.com/docs/products/dhtmlxGantt)
 
 
+Persian (Jalali) Calendar Support
+---------
+Using [PersianDate](https://github.com/babakhani/PersianDate) for date conversion.
+
+
 License
 ----------
 
