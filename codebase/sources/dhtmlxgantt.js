@@ -2715,6 +2715,7 @@
 							if (gantt.config.calendar == 'persian' && persianDate) {
 								var nextMonth = new persianDate(config.trace_x[i]);
 								nextMonth.add('months', config.step);
+								nextMonth.date(1);
 	
 								var days = Math.round((nextMonth.toDate() - config.trace_x[i]) / (1000 * 60 * 60 * 24));
 								width = days;
@@ -2815,13 +2816,6 @@
 						return;
 					}
 					else if (unit == 'month') {
-						// whe sould add previous month because each jalali month
-						// includes two gregorian months
-						var pre = new persianDate(start);
-						pre.subtract('months', 1);
-						pre.date(1);
-						callback.call(this, pre.toDate());
-	
 						var begin = new persianDate(start);
 						begin.date(1);
 						begin = begin.toDate();
@@ -2834,7 +2828,10 @@
 						var curr = new Date(begin);
 						while (+curr < +end) {
 							callback.call(this, new Date(curr));
-							curr = (new persianDate(curr)).add('months', 1).toDate();
+							curr = new persianDate(curr);
+							curr.add('months', 1);
+							curr.date(1);
+							curr = curr.toDate();
 						}
 	
 						return;
@@ -2862,26 +2859,6 @@
 			},
 			limitVisibleRange: function (cfg) {
 				var dates = cfg.trace_x;
-	
-				// added by amir
-				// added to support persian calendar
-				// change start date of each into the persian year
-				if (gantt.config.calendar == 'persian' && persianDate) {
-					if (cfg.unit == "month") {
-						for(var i=0;i<dates.length;i++){
-							var d = dates[i];
-							var p = new persianDate(d);
-	
-							p.add('months', 1);
-							p.date(1);
-	
-							dates[i] = p.toDate();
-						}
-	
-						cfg.trace_x_ascending = cfg.trace_x.slice();
-					}
-				}
-				// end
 	
 				var left = 0, right = cfg.width.length - 1;
 				var diff = 0;
