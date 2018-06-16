@@ -26,10 +26,10 @@ Using [PersianDate](https://github.com/babakhani/PersianDate) for date conversio
     <script type="text/javascript" src="persian-date.min.js"></script>
     <script type="text/javascript" src="codebase/locale/locale_fa.js"></script>
     ```
-4. Config gantt chart to render in Persian:
-   ```javascript
-   gantt.config.calendar = 'persian';
-   ```
+    Config gantt chart to render in Persian:
+    ```javascript
+    gantt.config.calendar = 'persian';
+    ```
 
 
 License
