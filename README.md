@@ -15,7 +15,7 @@ Using [PersianDate](https://github.com/babakhani/PersianDate) for date conversio
 
 ### Usage
 1. Download Project files.
-2. Add DHTMLX Gantt resources.
+2. Add DHTMLX Gantt resources:
     ```html
     <script type="text/javascript" src="codebase/dhtmlxgantt.js"></script>
     <link rel="stylesheet" type="text/css" href="codebase/dhtmlxgantt.css">
