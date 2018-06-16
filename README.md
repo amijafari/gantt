@@ -21,6 +21,7 @@ Using [PersianDate](https://github.com/babakhani/PersianDate) for date conversio
     <link rel="stylesheet" type="text/css" href="codebase/dhtmlxgantt.css">
     ```
 3. Setup Persian:
+    <br/>
     Load dependencies:
     ```html
     <script type="text/javascript" src="persian-date.min.js"></script>
