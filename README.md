@@ -1,3 +1,4 @@
+
 dhtmlxGantt v.5.1
 =================
 
@@ -11,6 +12,24 @@ dhtmlxGantt is an open source JavaScript Gantt chart that helps you illustrate a
 Persian (Jalali) Calendar Support
 ---------
 Using [PersianDate](https://github.com/babakhani/PersianDate) for date conversion.
+
+### Usage
+1. Download Project files.
+2. Add DHTMLX Gantt resources.
+    ```html
+    <script type="text/javascript" src="codebase/dhtmlxgantt.js"></script>
+    <link rel="stylesheet" type="text/css" href="codebase/dhtmlxgantt.css">
+    ```
+3. Setup Persian:
+    Load dependencies:
+    ```html
+    <script type="text/javascript" src="persian-date.min.js"></script>
+    <script type="text/javascript" src="codebase/locale/locale_fa.js"></script>
+    ```
+4. Config gantt chart to render in Persian:
+   ```javascript
+   gantt.config.calendar = 'persian';
+   ```
 
 
 License
@@ -26,7 +45,7 @@ Useful links
 -------------
 
 - Online  documentation
-	https://docs.dhtmlx.com/gantt/
-	
+  https://docs.dhtmlx.com/gantt/
+  
 - Support forum
-	https://forum.dhtmlx.com/viewforum.php?f=15
+  https://forum.dhtmlx.com/viewforum.php?f=15
